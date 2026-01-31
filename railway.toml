@@ -1,0 +1,13 @@
+[build]
+builder = "NIXPACKS"
+
+[build.nixpacksPlan]
+phases.setup = { nixPkgs = ["nodejs-18_x"] }
+
+[build.nixpacksCommands]
+build = "npm run build"
+
+[deploy]
+startCommand = "npm run serve"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
