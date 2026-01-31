@@ -3,7 +3,7 @@ export const config = {
   WS_ENDPOINT: '/ws',
   
   getWebSocketUrl: function() {
-    const url = this.BACKEND_URL.replace(/^http/, 'ws');
+    const url = this.BACKEND_URL;
     return `${url}${this.WS_ENDPOINT}`;
   },
   
