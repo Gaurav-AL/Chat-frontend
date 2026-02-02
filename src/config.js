@@ -3,9 +3,7 @@ export const config = {
   WS_ENDPOINT: '/ws',
   
   getWebSocketUrl: function() {
-    // const url = this.BACKEND_URL.replace(/^http/, 'ws');
-    // return `${url}${this.WS_ENDPOINT}`;
-    return this.BACKEND_URL;
+      return `${this.BACKEND_URL}${this.WS_ENDPOINT}`;
   },
   
   isDevelopment: () => !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
