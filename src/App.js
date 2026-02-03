@@ -57,9 +57,12 @@ function App() {
 
   return (
     <div className="app">
-      <Header isConnected={isConnected} viewerCount={viewerCount} backend={config.BACKEND_URL} />
-      <div className="main">
-        <VideoPlayer />
+      {/* Video as full background */}
+      <VideoPlayer />
+
+      {/* Everything on top of the video */}
+      <div className="overlay">
+        <Header isConnected={isConnected} viewerCount={viewerCount} backend={config.BACKEND_URL} />
         <ChatContainer
           username={username}
           comments={comments}
